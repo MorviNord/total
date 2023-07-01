@@ -1,0 +1,54 @@
+@use '/src/sass/common/var.scss';
+@use '/src/sass/common/fonts.scss';
+
+.history-block-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+.history-block-header {
+    display: flex;
+    align-items: center;
+    
+    gap: 2rem;
+    
+        &__logo > picture > img {
+            max-width: 100%;
+        }
+
+        &__title {
+            @include fonts.card--title;
+            color: var.$color-text-gray;
+        }
+
+        &__report > a {
+            color: var.$color-links;
+            text-decoration: underline;
+        }
+}
+
+.history-block-body {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+
+        &__paragraph {
+            @include fonts.card--subtitle;
+            color: var.$color-text-gray;
+        }
+
+        &__sign {
+            display: flex;
+            flex-direction: column;
+
+            gap: 0.75rem;
+
+                span:first-child {
+                    @include fonts.text--small;
+                    color: var.$color-subtext-gray;
+                }
+        }
+}

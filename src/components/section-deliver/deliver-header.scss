@@ -1,0 +1,25 @@
+@use '/src/sass/common/fonts.scss';
+@use '/src/sass/common/var.scss';
+
+.deliver-header {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+    max-width: 41rem;
+
+        &__title {
+            @include fonts.h2--title;
+            color: var.$color-text-gray;
+        }
+
+        &__subtitle {
+            @include fonts.header--menu;
+            color: var.$color-text-gray;
+
+            span {
+                color: var.$color-primary;
+            }
+        }
+}

@@ -1,0 +1,19 @@
+@use '/src/sass/common/fonts.scss';
+@use '/src/sass/common/var.scss';
+
+.faq-header {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.25rem;
+
+        &__title {
+            @include fonts.h2--title;
+            color: var.$color-text-gray;
+        }
+
+        &__subtitle {
+            @include fonts.header--menu;
+            color: var.$color-subtext-gray;
+        }
+}

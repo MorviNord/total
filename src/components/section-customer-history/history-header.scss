@@ -1,0 +1,16 @@
+@use '/src/sass/common/var.scss';
+@use '/src/sass/common/fonts.scss';
+
+.history-header {
+    margin-bottom: 4rem;
+
+        &__title {
+            @include fonts.h2--title;
+            color: var.$color-text-gray;
+        }
+
+    @media (width <= 768px) {
+        margin-bottom: 2rem;
+    }
+}
+

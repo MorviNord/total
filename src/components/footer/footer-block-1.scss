@@ -1,0 +1,27 @@
+@use '/src/sass/common/fonts.scss';
+@use '/src/sass/common/var.scss';
+
+.footer-block {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+        &__adress {
+            @include fonts.header--contact;
+            color: var.$color-text-gray;
+        }
+}
+
+.footer-requisites {
+    display: flex;
+    flex-wrap: wrap;
+
+    row-gap: 1.25rem;
+
+    max-width: 26rem;
+
+        p {
+            flex: 0 1 50%;
+        }
+}

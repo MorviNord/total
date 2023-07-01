@@ -1,0 +1,37 @@
+//main-colors
+$color-body: #ffffff;
+$color-section: #F7F9FA;
+$color-primary: #ED0000;
+$color-text-gray: #2E3B3D;
+$color-subtext-gray: #637B85;
+
+//buttons
+$color-button-primary: #ffffff;
+
+//links
+$color-links: #006FFF;
+
+//color-card
+.color--red {
+    background: linear-gradient(92.92deg, #ED070E 0%, #F57E16 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.color--green {
+    background: linear-gradient(92.92deg, #3FA800 0.64%, #018849 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.color--orange {
+    background: linear-gradient(90deg, #E37601 0%, #E6AC00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.color--blue {
+    background: linear-gradient(272.27deg, #009AEA 0%, #4533FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,70 @@
+@use '/src/sass/common/fonts.scss';
+@use '/src/sass/common/var.scss';
+@use '/src/sass/common/buttons.scss';
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.75rem;
+
+        &__tel {
+            @include fonts.h2--title;
+            color: var.$color-text-gray;
+        }
+
+        &__email {
+            @include fonts.section--subtitle;
+            color: var.$color-subtext-gray;
+        }
+}
+
+.footer-right {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1.25rem;
+
+        &__button {
+            display: flex;
+            align-items: center;
+
+            gap: 0.625rem;
+
+            @include buttons.button--burger;
+            color: var.$color-primary;
+
+            @media (width <= 425px) {
+                justify-content: center;
+            }
+
+            svg {
+                fill: var.$color-primary;
+            }
+        }
+    
+    @media (width <= 425px) {
+        flex-wrap: wrap;
+    }
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+        a {
+            display: flex;
+
+            padding: 1rem;
+
+            border: 1px solid var.$color-primary;
+            border-radius: 50%;
+
+                svg {
+                    fill: var.$color-primary;
+                }
+        }
+}

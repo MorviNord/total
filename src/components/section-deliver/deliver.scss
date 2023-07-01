@@ -1,0 +1,25 @@
+@use '/src/sass/common/var.scss';
+
+.deliver {
+    padding: 6.25rem 0 6.25rem 0;
+
+    background: var.$color-section;
+
+        @media (width <= 1024px) {
+            padding: 3.25rem 0 3.25rem 0;
+        }
+}
+
+.deliver-wrapper {
+    display: flex;
+
+    justify-content: space-between;
+
+        @media (width <= 1024px) {
+            gap: 2rem;
+        }
+
+        @media (width <= 768px) {
+            flex-wrap: wrap;
+        }
+}

@@ -1,0 +1,16 @@
+@use '/src/sass/common/var.scss';
+@use '/src/sass/common/fonts.scss';
+
+.achievements-header {
+    margin-top: clamp(2rem, 5vw, 8rem);
+
+        &__title {
+            @include fonts.welcome--title;
+
+            max-width: 33rem;
+        }
+
+    @media (width <= 568px) {
+        margin-top: 0;
+    }
+}

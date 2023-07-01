@@ -1,0 +1,38 @@
+@use '/src/sass/common/var.scss';
+@use '/src/sass/common/fonts.scss';
+
+.advantages-block {
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap: 1.25rem;
+}
+
+.advantages-card {
+    max-width: 24rem;
+    padding: 2.25rem 1.875rem 5.5rem;
+    background: var.$color-body;
+
+    border-radius: 1.75rem;
+    
+
+        &__body {
+            display: flex;
+            flex-direction: column;
+
+            gap: 1rem;
+        }
+        
+            @media (width < 500px) {
+                max-width: none;
+            }
+
+            @media (500px < width < 1366px) {
+                max-width: none;
+                flex: 1 0 40%;
+            }
+
+            @media (1366px < width < 1632px) {
+                flex: 1 20%;
+            }
+}

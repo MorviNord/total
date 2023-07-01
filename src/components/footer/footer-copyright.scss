@@ -1,0 +1,21 @@
+@use '/src/sass/common/fonts.scss';
+@use '/src/sass/common/var.scss';
+
+.footer-copyright {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: clamp(2rem, 7vw, 6rem);
+
+        &__copyr {
+            @include fonts.text--small;
+            color: var.$color-subtext-gray;
+        }
+
+        &__policy {
+            @include fonts.text--small;
+            color: var.$color-subtext-gray;
+
+            text-decoration: underline;
+        }
+}

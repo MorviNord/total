@@ -1,0 +1,24 @@
+.welcome {
+    margin-top: 6.25rem;
+    padding-bottom: 11rem;
+
+        @media screen and (max-width: 1024px) {
+            padding-bottom: 0;
+        }
+}
+
+.welcome-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+        @media (width <= 1516px) {
+            picture > img {
+                max-width: 100%;
+            }
+        }
+
+        @media (width <= 1024px) {
+            justify-content: center;
+            flex-flow: wrap-reverse;
+        }
+}

@@ -1,0 +1,83 @@
+@use '/src/sass/common/var.scss';
+@use '/src/sass/common/fonts.scss';
+
+.btn-burger {
+    display: none;
+
+    height: 45px;
+    width: 45px;
+
+    border: 1px solid var.$color-primary;
+    border-radius: 50%;
+    padding: 10px;
+
+    background: none;
+
+        &__line {
+            transform-origin: 50%;
+            transition: .3s all linear;
+        }
+
+    @media (width <= 1024px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 5px;
+    }
+}
+
+.active-btn {
+    .btn-burger__line:first-child {
+        transform: translate(0, 4px) rotate(-45deg);
+    }
+
+    .btn-burger__line:last-child {
+        transform: translate(0, -4px) rotate(45deg);
+    }    
+}
+
+.burger {
+    display: none;
+    z-index: 20;
+    position: fixed;
+
+    width: 100%;
+    top: 6rem;
+    left: 0;
+
+    background: var.$color-body;
+}
+
+.burger--active{
+    display: flex;
+}
+
+.burger-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: calc(100vh - 6rem);
+    overflow-y: auto;
+    width: 100%;
+
+    padding: 28px 0 28px 0;
+}
+
+.burger-nav {
+    padding-bottom: 2rem;
+}
+
+.burger-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2.5rem;
+
+        &__item {
+            @include fonts.header--contact;
+            color: var.$color-text-gray;
+        }
+}

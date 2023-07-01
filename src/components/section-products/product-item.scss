@@ -1,0 +1,82 @@
+@use '/src/sass/common/var.scss';
+@use '/src/sass/common/fonts.scss';
+@use '/src/sass/common/buttons.scss';
+
+.products-contents__item {
+    display: none;
+}
+
+.products-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+
+        &__title {
+            @include fonts.card--title;
+        }
+
+        &__body {
+            @include fonts.card--subtitle;
+            color:  var.$color-text-gray;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+
+                gap: 20px;
+
+                max-width: 40.875rem;
+                padding: 0 0 0 1.75rem;
+            }
+
+            li {
+                @include fonts.card--subtitle;
+                position: relative;
+            }
+
+            li::after {
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: var.$color-primary;
+                position: absolute;
+                left: -25px;
+                top: 7px;
+              }
+
+              p {
+                max-width: 39rem;
+                margin-bottom: 2.25rem;
+              }
+        }
+
+        &__button {
+            @include buttons.button--clear;
+            @include fonts.card--subtitle;
+
+            color: var.$color-primary;
+            cursor: pointer;
+        }
+}
+
+.products-img {
+    display: none;
+
+    picture > img {
+        max-width: 100%;
+    }
+}
+
+.active {
+    display: block;
+}
+
+.active-tab {
+    display: block;
+    background: var.$color-primary;
+
+        svg {
+            fill: var.$color-body;
+        }
+}

@@ -1,0 +1,18 @@
+.question-form-step {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+    &:not(.active) {
+        display: none;
+    }
+}
+
+.question-form-footer__buttonPrev:not(.active) {
+    display: none;
+}
+
+.question-form-footer__buttonSubmit:not(.active) {
+    display: none;
+}

@@ -1,0 +1,101 @@
+@use '/src/sass/common/var.scss';
+@use '/src/sass/common/fonts.scss';
+@use '/src/sass/common/buttons.scss';
+
+.modal-callback {
+    position: relative;
+    display: flex;
+
+    padding: 4rem 4.5rem;
+    margin: 1.25rem;
+
+    background: var.$color-body;
+    border-radius: 1.75rem;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+
+        &__title {
+            @include fonts.card--title;
+            color: var.$color-text-gray;
+            
+            max-width: 40rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            gap: 2.25rem;
+
+                .modal__button {
+                    @include buttons.button--clear;
+                    color: var.$color-primary;
+                }
+        }
+
+    &__close {
+        position: absolute;
+        display: flex;
+
+        top: -70px;
+        right: 0;
+
+        padding: 0.625rem;
+
+        background: var.$color-body;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+
+        border-radius: 50%;
+
+            svg {
+                fill: var.$color-primary;
+            }
+    }
+
+
+    @media (width <= 768px) {
+        padding: 2rem 2.5rem;
+    }
+
+    @media (width < 375px) {
+        padding: 1.25rem 1.75rem;
+    }
+}
+
+.modal-block {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 2rem;
+
+    max-width: 40rem;
+
+        &__item {
+            flex: 0 1 50%;
+
+            padding: 1rem 1.875rem;
+            max-width: 18rem;
+
+            border: 1px solid var.$color-subtext-gray;
+            border-radius: 1.875rem;
+
+            &:focus-visible {
+                outline: 1px solid var.$color-links;
+            }
+
+            @media (width <= 320px) {
+                padding: 1rem 0.4rem;
+            }
+        }
+
+        &__text {
+            max-width: 18.5rem;
+
+            color: var.$color-subtext-gray;
+                a {
+                    color: var.$color-subtext-gray;
+                    text-decoration: underline;
+                }
+        }
+}

@@ -1,0 +1,17 @@
+@use '/src/sass/common/var.scss';
+
+.achievements {
+    padding: 6.25rem 0 6.25rem 0;
+    
+    background: var.$color-section;
+
+        @media (width <= 768px) {
+            padding: 3.25rem 0 3.25rem 0;
+        }
+}
+
+.achievements-wrapper {
+    display: flex;
+
+    justify-content: space-between;
+}

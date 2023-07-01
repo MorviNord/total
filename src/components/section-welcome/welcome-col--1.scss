@@ -1,0 +1,39 @@
+@use '/src/sass/common/fonts.scss';
+@use '/src/sass/common/buttons.scss';
+@use '/src/sass/common/var.scss';
+
+.welcome-col {
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+
+        &__title {
+            margin-top: 3.75rem;
+            max-width: 44rem;
+
+            @include fonts.welcome--title;
+            background: linear-gradient(92.92deg, #E3070D 0%, #F08120 100%);
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+
+                @media (width < 1024px) {
+                    margin-top: 1rem;
+                }
+        }
+
+        &__button {
+            color: var.$color-primary;
+            background-color: var.$color-button-primary;
+
+            @include buttons.button--clear;
+
+            cursor: pointer;
+
+                @media (width < 1024px) {
+                    color: var.$color-button-primary;
+                    background-color: var.$color-primary;
+                }
+        }
+}

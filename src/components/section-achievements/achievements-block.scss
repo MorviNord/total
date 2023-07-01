@@ -1,0 +1,15 @@
+.achievements-img  {
+    img {
+        max-width: 100%;
+    }
+}
+
+.achievements-wrapper {
+    display: flex;
+    gap: 3rem;
+
+    @media (width <= 568px) {
+        flex-wrap: wrap;
+        gap: 3.25rem;
+    }
+}

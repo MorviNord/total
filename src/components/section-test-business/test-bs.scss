@@ -1,0 +1,27 @@
+@use '/src/sass/common/var.scss';
+
+.test-business {
+    padding: 6.25rem 0 6.25rem 0;
+
+    background: var.$color-section;
+
+    @media (width <= 1440px) {
+        padding: 3.25rem 0 3.25rem;
+    }
+}
+
+.test-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+        .test-col {
+            @media (width <= 1440px) {
+                width: 100%;
+            }
+        }
+    @media (width <= 1024px) {
+        flex-wrap: wrap;
+    }
+}

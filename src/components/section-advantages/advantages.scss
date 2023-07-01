@@ -1,0 +1,26 @@
+@use '/src/sass/common/var.scss';
+@use '/src/sass/common/fonts.scss';
+
+.advantages {
+    padding: 6.25rem 0 6.25rem 0;
+
+    background: var.$color-section;
+
+        @media (width <= 1024px) {
+            padding: 4.25rem 0 6.25rem 0;
+        }
+}
+
+.advantages-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3.25rem;
+
+        &__title {
+            max-width: 25rem;
+
+            color: var.$color-text-gray;
+            @include fonts.h2--title;
+        }
+}

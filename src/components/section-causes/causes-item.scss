@@ -1,0 +1,38 @@
+@use '/src/sass/common/fonts.scss';
+@use '/src/sass/common/var.scss';
+
+.causes-block {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1.25rem;
+
+        @media (width < 768px) {
+            gap: 2rem;
+        }
+
+        @media (768px < width < 1598px) {
+            gap: 4.25rem;
+        }
+}
+
+.causes-item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+    max-width: 31.5rem;
+
+        &__title {
+            @include fonts.title--big;
+        }
+
+        &__subtitle {
+            @include fonts.section--subtitle;
+        }
+
+    @media (500px < width < 1598px) {
+        max-width: none;
+    }
+}

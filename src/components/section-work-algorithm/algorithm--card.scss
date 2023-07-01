@@ -1,0 +1,46 @@
+@use '/src/sass/common/var.scss';
+@use '/src/sass/common/fonts.scss';
+
+.algorithm-block {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1.25rem;
+}
+
+.algorithm-card {
+    background: var.$color-section;
+
+    max-width: 24rem;
+    padding: 2.25rem 1.875rem 4.25rem;
+
+    border-radius: 1.75rem;
+
+        &__body {
+            display: flex;
+            flex-direction: column;
+
+            gap: 1.5rem;
+        }
+
+            &__title {
+                @include fonts.card--title;
+            }
+
+            &__subtitle {
+                @include fonts.card--subtitle;
+            }
+
+    @media (width < 500px) {
+        max-width: none;
+    }
+
+    @media (500px < width < 1366px) {
+        max-width: none;
+        flex: 1 0 40%;
+    }
+
+    @media (1366px < width < 1632px) {
+        flex: 1 20%;
+    }
+}

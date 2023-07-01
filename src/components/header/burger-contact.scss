@@ -1,0 +1,28 @@
+@use '/src/sass/common/buttons.scss';
+@use '/src/sass/common/var.scss';
+@use '/src/sass/common/fonts.scss';
+
+.contact-burger {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.625rem;
+
+        &__item {
+            @include fonts.header--contact;
+        }
+
+        &__button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 0.625rem;
+        
+            @include buttons.button--burger;
+            color: var.$color-primary;
+        
+            padding: 18px 0 18px 0;
+            width: 100%;
+        }
+}

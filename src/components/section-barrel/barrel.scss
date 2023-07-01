@@ -1,0 +1,66 @@
+@use '/src/sass/common/var.scss';
+@use '/src/sass/common/fonts.scss';
+@use '/src/sass/common/buttons.scss';
+
+.barrel {
+    padding: 3rem 0 3rem 0;
+
+    background: var.$color-section;
+}
+
+.barrel-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @media (width <= 648px) {
+        flex-wrap: wrap-reverse;
+    }
+}
+
+.barrel-header {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+    padding-top: 8rem;
+
+        &__title {
+            max-width: 39rem;
+
+            @include fonts.welcome--title;
+        }
+
+        &__subtitle {
+            max-width: 24rem;
+
+            @include fonts.card--subtitle;
+            color: var.$color-text-gray;
+        }
+
+        @media (width <= 1024px) {
+            padding-top: 0;
+        }
+}
+
+.barrel-body {
+    margin-top: 5.25rem;
+
+        &__button {
+            @include buttons.button--clear;
+
+            @include fonts.card--subtitle;
+            color: var.$color-primary;
+
+            cursor: pointer;
+        }
+
+    @media (width <= 480px) {
+        margin-top: 3.25rem;
+    }
+}
+
+.barrel-img {
+    img {
+        max-width: 100%;
+    }
+}

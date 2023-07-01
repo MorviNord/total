@@ -1,0 +1,57 @@
+@use '/src/sass/common/var.scss';
+@use '/src/sass/common/fonts.scss';
+
+.accordion-item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+    width: 42rem;
+    padding: 1.5rem 0 1.5rem 0;
+
+    border-top: 1px solid var.$color-subtext-gray;
+
+        &__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+                h4 {
+                    @include fonts.card--title;
+                    color: var.$color-text-gray;
+                }
+
+                svg {
+                    fill: var.$color-text-gray;
+                    transition: transform 0.3s ease-out;
+                }
+        }
+
+        &__body {
+            padding-bottom: 1.5rem;
+
+                h4 {
+                    @include fonts.card--subtitle;
+                    color: var.$color-subtext-gray;
+                }
+        }
+
+    @media (width <= 1024px) {
+        width: 100%;
+    }
+
+    &:last-child {
+        border-bottom: 1px solid var.$color-subtext-gray;
+    }
+}
+
+.accordion-item:not(.accordion-item--show) .accordion-item__body {
+    display: none;
+}
+
+.accordion-item--show {
+    svg {
+        transform: rotate(-180deg);
+    }
+}

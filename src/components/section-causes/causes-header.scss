@@ -1,0 +1,11 @@
+@use '/src/sass/common/fonts.scss';
+@use '/src/sass/common/var.scss';
+
+.causes-header {
+    padding-bottom: 3.875rem;
+
+    &__title {
+        @include fonts.h2--title;
+        color:  var.$color-text-gray;
+    }
+}

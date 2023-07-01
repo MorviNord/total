@@ -1,0 +1,91 @@
+@use '/src/sass/common/var.scss';
+@use '/src/sass/common/fonts.scss';
+@use '/src/sass/common/buttons.scss';
+
+.quest-block {
+    width: 49rem;
+
+    padding: 4.5rem 4rem;
+
+    border-radius: 1.25rem;
+    background: var.$color-body;
+
+        @media (width <= 1440px) {
+            width: auto;
+            padding: 2.5rem 1.25rem
+        }
+}
+
+.question-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+}
+
+.question-form-header {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+        &__title {
+            @include fonts.h2--title;
+            color: var.$color-text-gray;
+        }
+
+        &__spec {
+            @include fonts.header--menu;
+            color: var.$color-subtext-gray;
+
+            span {
+                color: var.$color-primary;
+            }
+        }
+}
+
+.question-form-body {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+
+        &__text {
+            padding: 1rem 1.875rem;
+
+            border: 1px solid var.$color-subtext-gray;
+            border-radius: 1.875rem;
+        }
+}
+
+.question-form-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+        &__buttonNext {
+            @include buttons.button--clear;
+            color: var.$color-primary;
+        }
+
+        &__buttonPrev {
+            display: flex;
+            align-items: center;
+            
+            gap: 0.625rem;
+
+            @include buttons.button--prev;
+            color: var.$color-subtext-gray;
+
+            svg {
+                fill: var.$color-subtext-gray;
+            }
+        }
+
+        &__buttonSubmit {
+            @include buttons.button--clear;
+            color: var.$color-primary;
+        }
+
+}

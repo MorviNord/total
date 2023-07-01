@@ -1,0 +1,20 @@
+@use '/src/sass/common/buttons.scss';
+@use '/src/sass/common/var.scss';
+
+
+.deliver-body {
+    margin-top: 4.25rem;
+
+        &__button {
+            @include buttons.button--clear;
+            color: var.$color-primary;
+
+            cursor: pointer;;
+        }
+}
+
+.deliver-img {
+    img {
+        max-width: 100%;
+    }
+}

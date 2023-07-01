@@ -1,0 +1,46 @@
+@use '/src/sass/common/fonts.scss';
+@use '/src/sass/common/var.scss';
+
+.products {
+    padding: 6.25rem 0 6.25rem 0;
+
+    @media (width <= 1024px) {
+        padding: 3.25rem 0 3.25rem 0;
+    }
+}
+
+.products-shell {
+    display: flex;
+    justify-content: space-between;
+
+    @media (width <= 1440px) {
+        gap: 2rem;
+    }
+
+    @media (width <= 768px) {
+        flex-wrap: wrap;
+    }
+}
+
+.products-header {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.125rem;
+
+    max-width: 31rem;
+
+        &__title {
+            @include fonts.h2--title;
+            color: var.$color-text-gray;
+        }
+
+        &__subtitle {
+            @include fonts.header--menu;
+            color: var.$color-subtext-gray;
+        }
+
+    @media (width <= 1440px) {
+        max-width: none;
+    }
+}

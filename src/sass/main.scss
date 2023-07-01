@@ -1,0 +1,81 @@
+@use '/src/sass/common/normalize.scss';
+@use './base.scss';
+@use './common/var.scss';
+@use './common/fonts.scss';
+@use './common/buttons.scss';
+@use '/src/fonts/nunito_regular.scss';
+@use '/src/sass/utilits/ItcSlider/itc-slider.scss';
+@use '/src/sass/utilits/ItcSlider/slider.scss';
+
+//egg
+@use '/src/components/easterEgg/easterEgg.scss';
+
+//sections
+
+//header
+@use '/src/components/header/header.scss';
+@use '/src/components/header/burger.scss';
+@use '/src/components/header/burger-contact.scss';
+
+//section-welcome
+@use '/src/components/section-welcome/welcome.scss';
+@use '/src/components/section-welcome/welcome-col--1.scss';
+
+//section-advantages
+@use '/src/components/section-advantages/advantages.scss';
+@use '/src/components/section-advantages/advantages-block.scss';
+
+//section-products
+@use '/src/components/section-products/products.scss';
+@use '/src/components/section-products/product-tabs.scss';
+@use '/src/components/section-products/product-item.scss';
+
+//section-barrel
+@use '/src/components/section-barrel/barrel.scss';
+
+//section-causes
+@use '/src/components/section-causes/causes.scss';
+@use '/src/components/section-causes/causes-header.scss';
+@use '/src/components/section-causes/causes-item.scss';
+
+//section-deliver
+@use '/src/components/section-deliver/deliver.scss';
+@use '/src/components/section-deliver/deliver-header.scss';
+@use '/src/components/section-deliver/deliver-body.scss';
+
+//section-customer-history
+@use '/src/components/section-customer-history/history.scss';
+@use '/src/components/section-customer-history/history-header.scss';
+@use '/src/components/section-customer-history/history-body.scss';
+
+//section-achievements
+@use '/src/components/section-achievements/achievements.scss';
+@use '/src/components/section-achievements/achievements-header.scss';
+@use '/src/components/section-achievements/achievements-block.scss';
+
+//section-work-algorithm 
+@use '/src/components/section-work-algorithm/work-algorithm.scss';
+@use '/src/components/section-work-algorithm/algorithm--card.scss';
+
+//section-faq
+@use '/src/components/section-faq/faq.scss';
+@use '/src/components/section-faq/faq-header.scss';
+@use '/src/components/section-faq/faq-accordion.scss';
+
+//section-test-bs
+@use '/src/components/section-test-business/test-bs.scss';
+@use '/src/components/section-test-business/test-bs-header.scss';
+@use '/src/components/section-test-business/test-bs-quest.scss';
+@use '/src/components/section-test-business/test-bs-custom-form.scss';
+@use '/src/components/section-test-business/test-bs-step.scss';
+
+//footer
+@use '/src/components/footer/footer.scss';
+@use '/src/components/footer/footer-block-1.scss';
+@use '/src/components/footer/footer-block-2.scss';
+@use '/src/components/footer/footer-copyright.scss';
+
+//modals
+@use '/src/components/modals/modal--main.scss';
+
+@use '/src/components/modals/modal-callback/modal-callback.scss';

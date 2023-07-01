@@ -1,0 +1,25 @@
+footer {
+    padding: 4.5rem 0 2rem;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+        @media (width <= 1024px) {
+            flex-wrap: wrap;
+
+            gap: 2.875rem;
+        }
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3rem;
+
+        @media (width <= 425px) {
+            width: 100%;
+        }
+}

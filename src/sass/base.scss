@@ -1,0 +1,46 @@
+@use './common/var.scss';
+
+.container {
+    max-width: 100rem;
+    margin: 0 auto;
+
+        @media screen and (max-width: 1632px) {
+            padding: 0 1.25rem
+        }
+}
+
+.stop-scroll {
+    overflow: hidden;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+    
+
+body {
+    font-family: "Nunito", "Arial", sans-serif;
+    background: var.$color-body;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover, a:visited, a:link {
+    color: var.$color-text-gray;
+}
+
+h1,h2,h3,h4,h5, p, ul {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box
+} 

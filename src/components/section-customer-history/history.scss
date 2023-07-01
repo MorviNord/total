@@ -1,0 +1,26 @@
+@use '/src/sass/common/var.scss';
+
+.customer-history {
+    padding: 6.25rem 0 6.25rem 0;
+
+        @media (width <= 425px) {
+            padding: 3.25rem 0 0 0;
+        }
+}
+
+.history-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    padding: 2rem;
+    height: 100%;
+    max-width: 46rem;
+
+    border-radius: 1.25rem;
+    background: var.$color-section;
+
+        @media (width <= 425px) {
+            padding: 1.25rem;
+        }
+}

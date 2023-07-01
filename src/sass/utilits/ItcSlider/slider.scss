@@ -1,0 +1,49 @@
+.itc-slider-items-gap {
+    --gap: 1rem;
+    gap: var(--gap);
+
+        @media (width <= 768px) {
+            align-items: flex-start;
+        }
+  }
+/* на маленьких устройствах 1 слайд */
+.itc-slider-item {
+    flex: 0 0 100%;
+  }
+  
+  /* на средних экранах (ширина больше 768px) 2 слайда */
+  @media (min-width: 768px) {
+    .itc-slider-item--slide {
+      flex: 0 0 50%;
+    }
+  }
+  
+  /* на больших экранах (ширина больше 1200px) 3 слайда */
+  @media (min-width: 1200px) {
+    .itc-slider-item--slide {
+      flex: 0 0 33.3333333333%;
+    }
+  }
+
+  .itc-slider-btn {
+    @media (width <= 768px) {
+        display: none;
+    }
+  }
+
+.indicator-active {
+  display: none;
+
+    @media (width <= 768px) {
+      display: flex;
+      
+  }
+
+}
+
+.itc-slider-indicator {
+  @media (width <= 768px) {
+    width: 40px;
+    height: 6px;
+  }
+}

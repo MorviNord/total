@@ -1,0 +1,35 @@
+@use '/src/sass/common/var.scss';
+
+.products-tabs {
+    display: flex;
+
+    margin: 2.25rem 0 2.25rem;
+
+        &__item {
+            padding: 12px 40px;
+
+            background: var.$color-section;
+            border-bottom: 2px solid var.$color-primary;
+
+                &:first-child {
+                    border-radius: 10px 0 0 10px;
+                }
+
+                &:last-child {
+                    border-radius: 0 10px 10px 0;
+                }
+
+                svg {
+                    fill: var.$color-primary;
+                    max-width: 100%;
+                }
+
+    @media (width <= 1440px) {
+        padding: 3px 30px;
+    }
+
+    @media (width <= 425px) {
+        padding: 1px 12px
+    }
+        }
+}
